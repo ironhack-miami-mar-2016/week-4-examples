@@ -1,0 +1,21 @@
+<h2>
+  Generate placeholder text from
+  <i>The Godfather</i>
+</h2>
+
+<form method="post" action="/glipsum">
+  <label for="glipsum_amount">Amount:</label>
+  <input type="number" name="glipsum[amount]" id="glipsum_amount">
+
+  <label for="glipsum_option">Option:</label>
+  <select name="glipsum[option]" id="glipsum_option">
+    <option>paragraphs</option>
+    <option>words</option>
+  </select>
+
+  <button type="submit">
+    Generate placeholder text
+  </button>
+
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+</form>
